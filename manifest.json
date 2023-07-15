@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Catify",
+    "version": "1.0",
+    "description": "Transform web pages into a cat-themed version",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "browser_action": {
+      "default_icon": "hecker.jpg",
+      "default_popup": "popup.html"
+    }
+  }
